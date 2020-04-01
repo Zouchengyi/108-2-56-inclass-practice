@@ -1,17 +1,9 @@
 ---
-title: "ujh"
+title: '0331'
 author: "Zouchengyi"
-date: "2020/3/25"
+date: "2020/4/1"
 output: html_document
 ---
-```{r}
-logi1 <- c(T,TRUE,F,FALSE,FALSE)
-```
-
-
-```{r}
-sum(logi1)
-```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
