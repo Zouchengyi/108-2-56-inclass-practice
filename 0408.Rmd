@@ -1,0 +1,16 @@
+---
+title: "0408"
+author: "Zouchengyi"
+date: "2020/4/8"
+output: html_document
+---
+
+##選「一個元素」
+
+```{r}
+vectorExample <- c("小明","小英","大雄")
+
+# 有多少位置可選：
+length(vectorExample)
+```
+

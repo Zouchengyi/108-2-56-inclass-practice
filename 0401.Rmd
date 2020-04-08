@@ -176,6 +176,13 @@ course1_1082 <-
   )
 ```
 
+```{r}
+library(jsonlite)
+fromJSON("https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=rdec-key-123-45678-011121314&format=JSON") ->
+  weather_next36hours
+```
+
+
 ##3.7
 ```{r}
 `save`(commit,`小明108學年課表D`, file="today.Rda")
@@ -184,6 +191,21 @@ course1_1082 <-
 
 ```{r}
 `load`("today.Rda")
+```
+##Homework
+
+```{r}
+`今明天氣`<- list(
+  `date_ymd` = c("2020-03-31","2020-04-01"),
+  `city` = "台北市",
+  `最高溫` = "25度",
+  `最低溫`= "18度",
+  )
+  
+  
+
+print(`今明天氣`)
+
 ```
 
 
