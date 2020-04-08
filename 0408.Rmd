@@ -122,7 +122,117 @@ vectorExample[c(3,2,1)] # 產生重新排列效果
 ```
 
 ```{r}
+# 顯示到第一層
+str(listExample, max.level=1)
 
+str(listExample[c(1,2)],max.level = 1)
+str(listExample[c(2,1)],max.level = 1)
+```
+#任選數筆tainanSportsMap的運動地點
+
+```{r}
+str(tainanSportsMap[c(1,181,987)],max.level = 1)
+```
+```{r}
+# 顯示到第一層
+str(listExample, max.level=1)
+
+listExample[c("學期")]
+listExample[c("student","學期")]
+listExample[c("學期","student")]
+```
+#臺北市夜市資料（來自臺北市食材登錄平台食材來源資訊）：
+
+```{r}
+fromJSON("https://www.dropbox.com/s/qnm9bnz7vccrvcz/taipeiNightMarkets.json?dl=1", simplifyDataFrame = F) -> taipeiNightMarkets
+```
+#任選幾個夜市元素出來
+
+```{r}
+taipeiNightMarkets[c(1,6,13)]
+taipeiNightMarkets[c("南機場夜市","士林觀光夜市")]
+```
+# 用「要/不要」邏輯向量選[c(T,T,F,...)]
+```{r}
+vectorExample
+vectorExample[c(T,T,F)] # 要，要，不要
+```
+```{r}
+str(listExample[c(F,T)]) # 不要，要
+str(listExample[c(T,T)]) # 要，要
+```
+用「要/不要」邏輯向量自taipeiNightMarkets選出 寧夏觀光夜市，西昌街觀光夜市，大龍街夜市， 雙城街夜市
+
+```{r}
+names(taipeiNightMarkets)
+str(taipeiNightMarkets[c(T,F,
+                         F,F,
+                         T,F,
+                         F,F,
+                         F,T,
+                         F,F,
+                         F,T)],max.level = 1)
 ```
 
+```{r}
+c(T,F,
+  F,F,
+  T,F,
+  F,F,
+  F,T,
+  F,F,
+  F,T)->selectedMarkets
+
+taipeiNightMarkets[selectedMarkets]
+```
+```{r}
+selectedMarkets<-rep(F,14)#repeat
+print(`selectedMarkets`)
+selectedMarkets[c(1,5,10,14)]<-TRUE
+print(`selectedMarkets`)
+```
+
+```{r}
+str(listExample, max.level = 3)
+```
+#以下兩個表面都是選取“學期”
+```{r}
+get1 <- listExample[["學期"]]
+get2 <- listExample["學期"]
+```
+
+listExample[["學期"]]
+
+```{r}
+get1<-listExample[["學期"]]
+str(get1, max.level = 1)
+```
+#若只取一個元素
+```{r}
+str(listExample, max.level = 3)
+```
+
+```{r}
+get2<- listExample["學期"] # listExample 只留下 學期元素，是個只有一個元素的list
+str(get2, max.level = 1)
+```
+
+#整理
+```{r}
+str(listExample, max.level = 3)
+```
+
+```{r}
+str(get1, max.level = 1)
+```
+
+```{r}
+str(get2, max.level = 1)
+```
+
+#連鎖選取
+
+```{r}
+
+```
 
