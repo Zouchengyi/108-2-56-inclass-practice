@@ -1,0 +1,58 @@
+---
+title: '0415'
+author: '410873113'
+date: "2020/4/15"
+output: html_document
+---
+
+在前面討論使用$及[]取一個元素時我們創造了get1與get2兩個物件，請分別由get1, get2取出108-1學期個體經濟學教師姓名。
+
+```{r}
+listExample <- 
+  list(
+    student="小明",
+    `學期`=list(
+      `108-1`=list(
+        list(
+          name="個體經濟學",
+          teacher="Alice",
+          grade=85
+        )
+      ),
+      `108-2`=list(
+        list(
+          name="總體經濟學",
+          teacher="Mark",
+          grade=78
+        )
+      )
+    )
+  )
+```
+
+```{r}
+str(listExample)
+```
+
+```{r}
+get1<-listExample[["學期"]] #拿出來
+get1<-listExample$`學期`
+
+get2<-listExample["學期"]#只留下
+```
+
+
+```{r}
+get1$`108-1`-> get1_layer1;get1_layer1
+str(get1_layer1)
+```
+
+```{r}
+get1_layer1[[1]]-> get1_layer2;get1_layer2
+str(get1_layer2)
+```
+
+```{r}
+get1_layer2$teacher
+```
+

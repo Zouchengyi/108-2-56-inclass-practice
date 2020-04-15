@@ -70,7 +70,7 @@ R_USER           C:/Users/user/OneDrive/??
 RMARKDOWN_MATHJAX_PATH
                  C:/Program
                  Files/RStudio/resources/mathjax-26
-RS_LOCAL_PEER    \\.\pipe\44320-rsession
+RS_LOCAL_PEER    \\.\pipe\44940-rsession
 RS_RPOSTBACK_PATH
                  C:/Program
                  Files/RStudio/bin/rpostback
@@ -87,7 +87,7 @@ RSTUDIO_MSYS_SSH
 RSTUDIO_PANDOC   C:/Program
                  Files/RStudio/bin/pandoc
 RSTUDIO_SESSION_PORT
-                 44320
+                 44940
 RSTUDIO_USER_IDENTITY
                  user
 RSTUDIO_WINUTILS

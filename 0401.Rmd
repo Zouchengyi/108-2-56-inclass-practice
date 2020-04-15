@@ -197,7 +197,7 @@ fromJSON("https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authori
 ```{r}
 `今明天氣`<- list(
   `date_ymd` = c("2020-03-31","2020-04-01"),
-  `city` = "台北市",
+  city = "台北市",
   `最高溫` = "25度",
   `最低溫`= "18度",
   )
